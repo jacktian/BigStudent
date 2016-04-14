@@ -17,7 +17,7 @@ public class AppAbility {
 	}
 	@Override
 	public String toString() {
-		return item + ", ÄúµÄµÃ·Ö" + score ;
+		return item + ", æ‚¨çš„å¾—åˆ†" + score ;
 	}
-	
+
 }

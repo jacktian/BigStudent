@@ -24,6 +24,6 @@ public class Factory {
 	}
 	@Override
 	public String toString() {
-		return item + ",�÷�" + score + "," + desc;
+		return item + ",х├ио" + score + "," + desc;
 	}
 }

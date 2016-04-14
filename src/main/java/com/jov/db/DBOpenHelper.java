@@ -55,18 +55,18 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 	public static String SIMPLE_TEST_ANSWERFSCORE = "answerFScore";
 	public static String SIMPLE_TEST_ANSWERGSCORE = "answerGScore";
 	public static String SIMPLE_TEST_FLAG = "flag";
-	
+
 	public static String FACTORY_ITEM = "item";
 	public static String FACTORY_SCORE = "score";
 	public static String FACTORY_DESC = "desc";
-	
+
 	public static String USER_NAME = "name";
 	public static String USER_SEX = "sex";
 	public static String USER_ID = "uid";
-	
+
 	public static String SETTING_CONTENT = "content";
 	public static String SETTING_STATUS = "status";
-	
+
 	private static final String DB_NAME = "mytest.db";
 	/**
 	 * version
@@ -91,14 +91,14 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 	private static final String CREATE_TABLE_SETTING = "create table IF NOT EXISTS tb_setting(ukey varchar(40) primary key ,"
 			+ "content varchar(40),status varchar(2))";
 	private static final String CREATE_TABLE_SIMPLE_TEST = "create table IF NOT EXISTS tb_simple_test(sid integer primary key autoincrement,"
-			+ "subject varchar(200),answerA varchar(100),answerB varchar(100),answerC varchar(100),answerD varchar(100),answerE varchar(100)," 
+			+ "subject varchar(200),answerA varchar(100),answerB varchar(100),answerC varchar(100),answerD varchar(100),answerE varchar(100),"
 			+ "answerF varchar(100),answerG varchar(100),answerAScore integer,answerBScore integer,answerCScore integer,answerDScore integer,"
 			+ "answerEScore integer,answerFScore integer,answerGScore integer,flag integer)";
 	private static final String CREATE_TABLE_TEST_RESULT = "create table IF NOT EXISTS tb_test_result(tid integer primary key autoincrement,"
 			+ "name varchar(40),content varchar(400),tester varchar(40))";
 	private static final String CREATE_TABLE_COLOR_TEST = "create table IF NOT EXISTS tb_color_test(tid integer primary key autoincrement,"
 			+ "name varchar(40),content varchar(400),tester varchar(40))";
-	
+
 	/**
 	 * SQL for drop table
 	 * */
@@ -139,11 +139,11 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 
 	public void insertCommonData(SQLiteDatabase db) {
 		String sql = "insert into tb_test values(?,?,?,?,?)";
-		String name = "´óÑ§ÉúĞÄÀíËØÖÊ½¡¿µ²âÊÔ";
-		String times = "Ô¤¼ÆÓÃÊ±1Ğ¡Ê±";
+		String name = "å¤§å­¦ç”Ÿå¿ƒç†ç´ è´¨å¥åº·æµ‹è¯•";
+		String times = "é¢„è®¡ç”¨æ—¶1å°æ—¶";
 		String testNum = "187";
-		String simple_name = "Ö°³¡ĞÔ¸ñ²âÊÔ";
-		String simple_times = "Ô¤¼ÆÓÃÊ±10·ÖÖÓ";
+		String simple_name = "èŒåœºæ€§æ ¼æµ‹è¯•";
+		String simple_times = "é¢„è®¡ç”¨æ—¶10åˆ†é’Ÿ";
 		String simple_testNum = "10";
 		try {
 			InputStream is = context.getAssets().open("test_desc.db");
@@ -156,7 +156,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 			}
 			db.execSQL(sql, new String[] { "1",name, buffer.toString(), times,
 					testNum });
-			
+
 			is = context.getAssets().open("simple_test_desc.db");
 			reader = new BufferedReader(
 					new InputStreamReader(is));
@@ -277,7 +277,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 		}
 		return health;
 	}
-	
+
 	public int getTotalST() {
 		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor cursor = null;

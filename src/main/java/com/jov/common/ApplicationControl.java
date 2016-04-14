@@ -27,8 +27,8 @@ public final class ApplicationControl {
 		}else{
 			heartHealthy = 10;
 		}
-		applicationMap.put("ÐÄÀí½¡¿µ(Âú·Ö10)", heartHealthy);
-		
+		applicationMap.put("å¿ƒç†å¥åº·(æ»¡åˆ†10)", heartHealthy);
+
 		int professional = map.get("E")+map.get("H")+map.get("M")+map.get("N")+map.get("Q1");
 		if(professional>=5&&professional<=17){
 			professional = 1;
@@ -51,8 +51,8 @@ public final class ApplicationControl {
 		}else{
 			professional = 10;
 		}
-		applicationMap.put("´ÓÊÂ×¨ÒµÕßËØÖÊ(Âú·Ö10)", professional);
-		
+		applicationMap.put("ä»Žäº‹ä¸“ä¸šè€…ç´ è´¨(æ»¡åˆ†10)", professional);
+
 		int success = 2*map.get("Q3")+2*map.get("G")+2*map.get("C")+map.get("E")+map.get("N")+map.get("Q2")+map.get("Q1");
 		if(success>=10&&success<=38){
 			success = 1;
@@ -75,9 +75,9 @@ public final class ApplicationControl {
 		}else{
 			success = 10;
 		}
-		applicationMap.put("×¨Òµ¶øÓÐ³É¾ÍÕßËØÖÊ(Âú·Ö10)", success);
-		
-		
+		applicationMap.put("ä¸“ä¸šè€Œæœ‰æˆå°±è€…ç´ è´¨(æ»¡åˆ†10)", success);
+
+
 		int create = 2*(11-map.get("A"))+2*map.get("B")+2*(11-map.get("F"))+map.get("E")+map.get("H")+2*map.get("I")+map.get("M")+(11-map.get("N"))+2*map.get("Q2")+map.get("Q1");
 		if(create>=15&&create<=62){
 			create = 1;
@@ -100,7 +100,7 @@ public final class ApplicationControl {
 		}else{
 			create = 10;
 		}
-		applicationMap.put("´´ÔìÄÜÁ¦(Âú·Ö10)", create);
+		applicationMap.put("åˆ›é€ èƒ½åŠ›(æ»¡åˆ†10)", create);
 		int study = map.get("B")+map.get("G")+map.get("Q3")+(11-map.get("F"));
 		if(study>=4&&study<=14){
 			study = 1;
@@ -123,8 +123,8 @@ public final class ApplicationControl {
 		}else {
 			study = 10;
 		}
-		applicationMap.put("ÊÊÓ¦ÐÂ»·¾³£¬ÓÐÑ§Ï°³É³¤ÄÜÁ¦ÕßËØÖÊ(Âú·Ö10)", study);
-		
+		applicationMap.put("é€‚åº”æ–°çŽ¯å¢ƒï¼Œæœ‰å­¦ä¹ æˆé•¿èƒ½åŠ›è€…ç´ è´¨(æ»¡åˆ†10)", study);
+
 		int manage = map.get("Q3")+2*map.get("G")+(11-map.get("Q4"))+2*(11-map.get("M"));
 		if(manage>=6&&manage<=21){
 			manage = 1;
@@ -147,7 +147,7 @@ public final class ApplicationControl {
 		}else{
 			manage = 10;
 		}
-		applicationMap.put("¹ÜÀíÊÂÎñÕýÈ·¿É¿¿ÕßËØÖÊ(Âú·Ö10)", manage);
+		applicationMap.put("ç®¡ç†äº‹åŠ¡æ­£ç¡®å¯é è€…ç´ è´¨(æ»¡åˆ†10)", manage);
 		return applicationMap;
 	}
 }

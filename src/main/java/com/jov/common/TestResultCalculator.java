@@ -30,7 +30,7 @@ public class TestResultCalculator {
 		} else {
 			skill = 10;
 		}
-		adaptionMap.put("¼¼ÊõÐÍ", skill);
+		adaptionMap.put("æŠ€æœ¯åž‹", skill);
 		int art = 2 * map.get("M") + 2 * map.get("I") + map.get("B")
 				+ map.get("E") + map.get("F") + map.get("Q1") + map.get("Q2")
 				+ (11 - map.get("G"));
@@ -55,7 +55,7 @@ public class TestResultCalculator {
 		} else {
 			art = 10;
 		}
-		adaptionMap.put("ÒÕÊõÐÍ", art);
+		adaptionMap.put("è‰ºæœ¯åž‹", art);
 		int tech = map.get("B") + map.get("G") + map.get("Q3") + map.get("C")
 				+ map.get("H") + (11 - map.get("Q4"));
 		if (tech >= 6 && tech <= 21) {
@@ -79,7 +79,7 @@ public class TestResultCalculator {
 		} else {
 			tech = 10;
 		}
-		adaptionMap.put("½ÌÓýÐÍ", tech);
+		adaptionMap.put("æ•™è‚²åž‹", tech);
 		int science = 2 * map.get("B") + 2 * (11 - map.get("A")) + 2
 				* (11 - map.get("F")) + map.get("C") + map.get("E")
 				+ map.get("H") + map.get("Q1") + map.get("Q2")
@@ -105,7 +105,7 @@ public class TestResultCalculator {
 		} else {
 			science = 10;
 		}
-		adaptionMap.put("¿ÆÑÐÐÍ", science);
+		adaptionMap.put("ç§‘ç ”åž‹", science);
 
 		int service = 2 * map.get("A") + 2 * map.get("F") + map.get("G")
 				+ map.get("N") + map.get("Q3") + (11 - map.get("E"))
@@ -131,7 +131,7 @@ public class TestResultCalculator {
 		} else {
 			service = 10;
 		}
-		adaptionMap.put("·þÎñÐÍ", service);
+		adaptionMap.put("æœåŠ¡åž‹", service);
 
 		int manage = 2 * map.get("C") + 2 * map.get("G") + 2 * map.get("Q3")
 				+ map.get("B") + map.get("E") + map.get("H") + map.get("N")
@@ -157,7 +157,7 @@ public class TestResultCalculator {
 		} else {
 			manage = 10;
 		}
-		adaptionMap.put("¹ÜÀíÐÍ", manage);
+		adaptionMap.put("ç®¡ç†åž‹", manage);
 		int scoiety = 2 * map.get("F") + 2 * map.get("N") + 2 * map.get("H")
 				+ 2 * map.get("A") + map.get("E") + (11 - map.get("O"));
 		if (scoiety >= 10 && scoiety <= 35) {
@@ -181,7 +181,7 @@ public class TestResultCalculator {
 		} else {
 			scoiety = 10;
 		}
-		adaptionMap.put("Éç½»ÐÍ", scoiety);
+		adaptionMap.put("ç¤¾äº¤åž‹", scoiety);
 		return adaptionMap;
 	}
 }

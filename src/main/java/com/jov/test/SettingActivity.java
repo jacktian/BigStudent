@@ -44,12 +44,12 @@ public class SettingActivity extends Activity implements OnClickListener {
 	private String imgPath;
 	private View add_line;
 	/**
-	 * Í·ÏñÉèÖÃÓÃ
+	 * å¤´åƒè®¾ç½®ç”¨
 	 * */
 	public static final int NONE = 0;
-	public static final int PHOTOHRAPH = 1;// ÅÄÕÕ
-	public static final int PHOTOZOOM = 2; // Ëõ·Å
-	public static final int PHOTORESOULT = 3;// ½á¹û
+	public static final int PHOTOHRAPH = 1;// æ‹ç…§
+	public static final int PHOTOZOOM = 2; // ç¼©æ”¾
+	public static final int PHOTORESOULT = 3;// ç»“æœ
 	public static final String IMAGE_UNSPECIFIED = "image/*";
 	private Uri outputFileUri;
 	private String fileName;
@@ -97,7 +97,7 @@ public class SettingActivity extends Activity implements OnClickListener {
 			add_line.setVisibility(View.GONE);
 		}
 		if (!StringUtil.isEmpty(imgPath)) {
-			// Í¼Æ¬Â·¾¶
+			// å›¾ç‰‡è·¯å¾„
 			File img = new File(StringUtil.IMAGE_PATH, imgPath);
 			fileName = imgPath;
 			if (img.exists()) {
@@ -165,13 +165,13 @@ public class SettingActivity extends Activity implements OnClickListener {
 			dbHelper.updateAddSetting(imgPath, "n");
 		}
 	}
-	
+
 	/**
-	 * Í¼Æ¬ÉèÖÃ
+	 * å›¾ç‰‡è®¾ç½®
 	 * **/
 	private void imageRead() {
 		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-		/* ¿ªÆôPictures»­ÃæTypeÉè¶¨Îªimage */
+		/* å¼€å¯Picturesç”»é¢Typeè®¾å®šä¸ºimage */
 		intent.addCategory(Intent.CATEGORY_OPENABLE);
 		intent.setType(IMAGE_UNSPECIFIED);
 		startActivityForResult(intent, PHOTOZOOM);
@@ -186,7 +186,7 @@ public class SettingActivity extends Activity implements OnClickListener {
 			intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
 			startActivityForResult(intent, PHOTOHRAPH);
 		} else {
-			Toast.makeText(this, "( ¡Ñ o ¡Ñ )Ã»ÓĞ¼ì²âµ½SD¿¨£¡", Toast.LENGTH_SHORT)
+			Toast.makeText(this, "( âŠ™ o âŠ™ )æ²¡æœ‰æ£€æµ‹åˆ°SDå¡ï¼", Toast.LENGTH_SHORT)
 					.show();
 			return;
 		}
@@ -224,9 +224,9 @@ public class SettingActivity extends Activity implements OnClickListener {
 					mContent = readStream(resolver.openInputStream(Uri
 							.parse(uri.toString())));
 					myBitmap = getPicFromBytes(mContent, null);
-					// //°ÑµÃµ½µÄÍ¼Æ¬°ó¶¨ÔÚ¿Ø¼şÉÏÏÔÊ¾
+					// //æŠŠå¾—åˆ°çš„å›¾ç‰‡ç»‘å®šåœ¨æ§ä»¶ä¸Šæ˜¾ç¤º
 					setting_soft_infor.setImageBitmap(myBitmap);
-					// ¿½±´µ½Ä¿Â¼
+					// æ‹·è´åˆ°ç›®å½•
 					copyImageTolocal(myBitmap);
 				} catch (Exception e) {
 				}
@@ -242,7 +242,7 @@ public class SettingActivity extends Activity implements OnClickListener {
 	}
 
 	public static Bitmap getPicFromBytes(byte[] bytes,
-			BitmapFactory.Options opts) {
+										 BitmapFactory.Options opts) {
 		if (bytes != null)
 			if (opts != null)
 				return BitmapFactory.decodeByteArray(bytes, 0, bytes.length,
@@ -289,7 +289,7 @@ public class SettingActivity extends Activity implements OnClickListener {
 
 	private void photoChangeDialog() {
 		final AlertDialog dlg = new AlertDialog.Builder(this).create();
-		dlg.show();// ĞèÒª·ÅÔÚÇ°Ãæ
+		dlg.show();// éœ€è¦æ”¾åœ¨å‰é¢
 		Window window = dlg.getWindow();
 		window.setGravity(Gravity.BOTTOM);
 		window.setContentView(R.layout.setting_add_image_dialog);
@@ -297,22 +297,22 @@ public class SettingActivity extends Activity implements OnClickListener {
 		layparam.width = getWindowManager().getDefaultDisplay().getWidth();
 		window.setAttributes(layparam);
 		window.findViewById(R.id.tab_setting_photo_linear).setOnClickListener(
-			new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					dlg.dismiss();
-					deleteImage();
-					imageRead();
-				}
-		});
+				new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						dlg.dismiss();
+						deleteImage();
+						imageRead();
+					}
+				});
 		window.findViewById(R.id.tab_setting_camero_linear).setOnClickListener(
-			new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					dlg.dismiss();
-					deleteImage();
-					cameraRead();
-				}
-		});
+				new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						dlg.dismiss();
+						deleteImage();
+						cameraRead();
+					}
+				});
 	}
 }
