@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/resultdesc_linear"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:gravity="center_vertical"
+    android:minHeight="20.0dip"
+    android:orientation="horizontal"
+    android:padding="4.0dip" >
+
+    <TextView
+        android:id="@+id/result_content"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2.0dip"
+        android:layout_marginRight="2.0dip"
+        android:layout_weight="1.0"
+        android:singleLine="false"
+        android:text="@string/tab_mytest_result_des"
+        android:textColor="@color/black"
+        android:textSize="@dimen/DescTextSize" />
+</LinearLayout>

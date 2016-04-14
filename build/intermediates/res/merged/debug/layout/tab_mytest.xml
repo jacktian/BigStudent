@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainweixin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/navpage"
+        android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shape_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/user_tests_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/comm_shakebg_selected"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+
+                    <ImageView
+                        android:id="@+id/user_tests_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:src="@drawable/find_more_friend_near_icon" />
+
+                    <TextView
+                        android:id="@+id/mytest_username"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/tab_mytest_tester"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" />
+                    <ImageView
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/mm_submenu" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@drawable/shape_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/tests_result_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/comm_bg_top_selected"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+
+                    <ImageView
+                        android:id="@+id/tests_result_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:src="@drawable/find_more_friend_scan" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/tab_mytest_test_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="30.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+                    <ImageView
+                        android:layout_width="4dip"
+                        android:layout_height="match_parent" 
+                        android:background="@color/orange"
+                        android:padding="0.0dip"
+                        />
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2.0dip"
+                            android:layout_weight="1.0"
+                            android:text="@string/tab_mytest_report_1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/BasicTextSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/personal_report_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="20.0dip"
+                    android:orientation="horizontal"
+                    android:padding="4.0dip" >
+
+                    <TextView
+                        android:id="@+id/personal_report"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:layout_weight="1.0"
+                        android:singleLine="false"
+                        android:text="@string/tab_mytest_result_des"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/DescTextSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/tests_result_2_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="30.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+					<ImageView
+                        android:layout_width="4dip"
+                        android:layout_height="match_parent" 
+                        android:background="@color/orange"
+                        android:padding="0.0dip"
+                        />
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/tab_mytest_report_2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/ability_report_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="20.0dip"
+                    android:orientation="horizontal"
+                    android:padding="4.0dip" >
+
+                    <TextView
+                        android:id="@+id/ability_report"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:layout_weight="1.0"
+                        android:singleLine="false"
+                        android:text="@string/tab_mytest_result_des"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/DescTextSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/tests_result_3_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="30.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+					<ImageView
+                        android:layout_width="4dip"
+                        android:layout_height="match_parent" 
+                        android:background="@color/orange"
+                        android:padding="0.0dip"
+                        />
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/tab_mytest_report_3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/job_report_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="20.0dip"
+                    android:orientation="horizontal"
+                    android:padding="4.0dip" >
+
+                    <TextView
+                        android:id="@+id/job_report"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:layout_weight="1.0"
+                        android:singleLine="false"
+                        android:text="@string/tab_mytest_result_des"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/DescTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@drawable/shape_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/comm_bg_top_selected"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:src="@drawable/find_more_friend_scan" />
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/do_simple_testing_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" />
+                </LinearLayout>
+                 <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="30.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+                        <TextView
+                            android:id="@+id/simple_test_result_report"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2.0dip"
+                            android:layout_weight="1.0"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/BasicTextSize" 
+                            android:textIsSelectable="false"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

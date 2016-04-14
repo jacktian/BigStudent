@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/navpage" 
+    android:layout_gravity="bottom"
+    >
+    <RelativeLayout
+        android:id="@+id/tip_txt_rela"
+        android:layout_width="fill_parent"
+        android:layout_height="35.0dip"
+        android:layout_below="@id/main_top" >
+        <TextView
+            android:id="@+id/tip_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="2.0dip"
+            android:text="@string/create_user_dialog_tip"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="false"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip_txt_rela"
+        android:background="@color/navpage"
+        android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="0.0dip"
+                android:background="@drawable/shape_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/user_tests_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/comm_shakebg_selected"
+                    android:clickable="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="4.0dip" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="@string/create_user_dialog_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" />
+                    <EditText
+                        android:id="@+id/user_id"
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="4.0dip"
+                        android:layout_weight="1.0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" 
+                        android:layout_marginRight="4.0dip"
+                        android:hint="@string/create_user_dialog_name_tip"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shape_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:id="@+id/tests_result_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="4.0dip" >
+
+                    <TextView
+                        android:id="@+id/do_test_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="4.0dip"
+                        android:singleLine="false"
+                        android:text="@string/create_user_dialog_sex"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" />
+                    <RadioGroup
+                        android:id="@+id/sexGroup"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" 
+                        android:layout_weight="1.0"
+                        >
+                        <RadioButton
+                            android:id="@+id/sexMan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/create_user_dialog_sex_m"
+                            android:textSize="@dimen/size_12" 
+                            android:layout_marginRight="20.0dip"
+                            android:checked="true"
+                            android:textColor="@color/black"
+                            />
+                        <RadioButton
+                            android:id="@+id/sexWoman"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/create_user_dialog_sex_w"
+                            android:textSize="@dimen/size_12" 
+                            android:textColor="@color/black"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shape_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/user_photo_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="4.0dip" >
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/create_user_dialog_infor"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size_10" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/ok_begin_test_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/delete_user_btn_selected"
+                    android:padding="14dip"
+                    android:text="@string/create_user_dialog_sex_ok"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

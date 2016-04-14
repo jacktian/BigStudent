@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_noradius" 
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+     <LinearLayout
+        android:id="@+id/tab_setting_photo_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/comm_bg_selected"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:minHeight="60.0dip"
+        android:orientation="horizontal"
+        android:padding="10.0dip" >
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/tab_setting_photo"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+     <LinearLayout
+        android:id="@+id/tab_setting_camero_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/comm_bg_selected"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:minHeight="60.0dip"
+        android:orientation="horizontal"
+        android:padding="10.0dip" >
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.0dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/tab_setting_camero" 
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+</LinearLayout>

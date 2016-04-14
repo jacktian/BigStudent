@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/navpage" 
+    android:layout_gravity="bottom"
+    >
+    <RelativeLayout
+        android:id="@+id/test_infor_ti"
+        android:layout_width="fill_parent"
+        android:layout_height="35.0dip"
+        android:layout_below="@id/main_top" >
+        <TextView
+            android:id="@+id/test_infor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="2.0dip"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="false"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_infor_ti"
+        android:background="@color/navpage"
+        android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4.0dip"
+                android:layout_marginRight="4.0dip"
+                android:layout_marginTop="4.0dip"
+                android:background="@drawable/shape_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="4.0dip" >
+                    <TextView
+                        android:id="@+id/tesr_infor_content"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="2.0dip"
+                        android:layout_weight="1.0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size_12" 
+                        android:textIsSelectable="false"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4.0dip"
+                android:layout_marginRight="4.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <Button
+                    android:id="@+id/tesr_infor_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/delete_user_btn_selected"
+                    android:padding="10dip"
+                    android:text="@string/test_infor_dialog_btn"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/navpage"
+    >
+
+    <RelativeLayout
+        android:id="@+id/main_top"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@drawable/title_bar" >
+
+        <TextView
+            android:id="@+id/tab_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="12.0dip"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5.0dip"
+        android:orientation="horizontal"
+        android:visibility="visible" 
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:contentDescription="@string/activity_main_dot"
+            android:padding="5.0dip"
+            android:src="@drawable/page_indicator_bg" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:contentDescription="@string/activity_main_dot"
+            android:padding="5.0dip"
+            android:src="@drawable/page_indicator_bg" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_bottom"
+        android:layout_below="@id/main_top"
+        android:orientation="vertical" 
+        android:background="@color/navpage" >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tabpager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/navpage" >
+
+    <RelativeLayout
+        android:id="@+id/setting_top"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@drawable/title_bar" >
+
+        <TextView
+            android:id="@+id/tab_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="12.0dip"
+            android:text="@string/tab_setting_found"
+            android:textColor="@android:color/white"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/setting_top"
+        android:background="@color/navpage"
+        android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+			<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@drawable/shape_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/setting_add_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+
+                    <ImageView
+                        android:id="@+id/user_photo_set_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:src="@drawable/find_more_friend_photograph_icon" />
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/tab_setting_add"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" />
+                    <TextView
+                        android:id="@+id/setting_add_size_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="@string/tab_setting_add_size"
+                        android:layout_marginRight="10.0dip"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/size_12" />
+                    <ImageView
+                        android:id="@+id/setting_icon_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/seekbar_scrubber_control_focused" />
+                </LinearLayout>
+				<View
+				    android:id="@+id/add_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+                    <ImageView
+                        android:id="@+id/setting_soft_infor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="20.0dip"
+                        android:orientation="horizontal"
+                        android:src="@drawable/add" 
+                        android:layout_marginBottom="2.0dip"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@drawable/shape_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/tests_choose_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/comm_bg_top_selected"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+
+                    <ImageView
+                        android:id="@+id/tests_choose_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:src="@drawable/more_game" />
+
+                    <TextView
+                        android:id="@+id/tests_choose_str"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/tab_setting_about"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/BasicTextSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/tests_des_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/comm_bg_center_selected"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="4.0dip" >
+                    <TextView
+                        android:id="@+id/tests_choose_des"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4.0dip"
+                        android:layout_marginRight="4.0dip"
+                        android:layout_weight="1.0"
+                        android:lines="23"
+                        android:text="@string/tab_setting_myself"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/DescTextSize" 
+                        android:textIsSelectable="false"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_line" />
+
+                <LinearLayout
+                    android:id="@+id/tests_time_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/comm_bg_bottom_selected"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="40.0dip"
+                    android:orientation="horizontal"
+                    android:padding="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/tests_time"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:layout_weight="1.0"
+                        android:text="@string/tab_setting_myOther"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/DescTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
